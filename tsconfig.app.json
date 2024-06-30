@@ -10,6 +10,12 @@
             "DOM",
             "DOM.Iterable"
         ],
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "src/*"
+            ]
+        },
         "skipLibCheck": true,
         /* Bundler mode */
         "moduleResolution": "bundler",
@@ -24,12 +30,6 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
-        "baseUrl": ".",
-        "paths": {
-            "@/*": [
-                "src/*"
-            ]
-        }
     },
     "include": [
         "src/**/*.ts",

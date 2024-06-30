@@ -2,7 +2,7 @@
     <div class="wrap">
         <h2> 需要授权 </h2>
         <span> 请输入用户名和密码 </span>
-        <VSheet class="mx-auto" width="400" style="margin-top: 20px;">
+        <VSheet class="mx-auto" width="400" style="margin-top: 20px; background: rgb(18, 18, 18);">
             <VTextField prepend-inner-icon="mdi-account" v-model="username" type="text" rounded="lg"></VTextField>
             <VTextField prepend-inner-icon="mdi-lock" v-model="password" type="password" rounded="lg"></VTextField>
             <div class="submit">
@@ -17,20 +17,16 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref, defineProps, defineEmits } from 'vue';
 import { VIcon, VSheet, VTextField } from 'vuetify/components';
 import { useRouter } from 'vue-router';
+import useTitle from '@/store/title';
 
 const router = useRouter();
-
-fetch(`https://api.iaalai.cn/p`).then(res => {
-    if (res.status == 200) {
-        // 已经具备登录信息了
-        router.push('/status/overview');
-    }
-})
-
-import useTitle from '../../store/title';
+const { isLogin } = defineProps({
+    isLogin: Boolean
+});
+const emit = defineEmits(['logining']);
 
 useTitle().value = 'on login';
 
@@ -43,6 +39,7 @@ function clear() {
 }
 
 function login() {
+    emit('logining');
     router.push('/status/overview');
 }
 

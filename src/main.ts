@@ -18,7 +18,7 @@ createApp(App)
             defaultSet: 'mdi',
         },
         theme: {
-            defaultTheme: 'iaTheme',
+            defaultTheme: 'dark',
             themes: {
                 iaTheme: {
                     dark: true,

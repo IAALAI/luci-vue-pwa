@@ -1,0 +1,42 @@
+[
+    {
+        "name": "主机名",
+        "value": "QWRT"
+    },
+    {
+        "name": "型号",
+        "value": "JDCloud AX1800 Pro (CpuMark : 11505.824824 Scores)"
+    },
+    {
+        "name": "架构",
+        "value": "ARMv8 Processor rev 4 (v8l) x 4 (1440MHz, 71.9°C )"
+    },
+    {
+        "name": "目标平台",
+        "value": "ipq60xx/generic"
+    },
+    {
+        "name": "固件版本",
+        "value": "QWRT R24.6.18 (QSDK 12.2 R6) / main (git-24.171.38106-54dcb1c)"
+    },
+    {
+        "name": "内核版本",
+        "value": "5.4.218"
+    },
+    {
+        "name": "本地时间",
+        "value": "Sun Jun 30 22:29:03 2024"
+    },
+    {
+        "name": "运行时间",
+        "value": "3d 1h 3m 17s"
+    },
+    {
+        "name": "平均负载",
+        "value": "2.46, 2.58, 2.52"
+    },
+    {
+        "name": "CPU 使用率（%）",
+        "value": "CPU: 58% NPU: tcp 153 udp 172 other 0 total 325"
+    }
+]

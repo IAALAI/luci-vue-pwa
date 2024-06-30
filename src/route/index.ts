@@ -1,38 +1,17 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { RouteRecord, RouteRecordRaw, createRouter, createWebHashHistory } from 'vue-router'
 
-import login from '@/views/login/login.vue'
-import overview from '@/views/status/overview.vue'
+import none from '@/views/none.vue'
+import nav_routes from './nav_route'
 
 const router = createRouter({
     history: createWebHashHistory(),
     routes: [
         {
             path: '/',
-            redirect: '/login'
+            name: '',
+            component: none
         },
-        {
-            path: '/login',
-            name: 'login',
-            component: login
-        },
-
-        {
-            path: '/status/overview',
-            name: 'overview',
-            component: overview
-        }, {
-            path: '/status/firewall',
-            name: 'firewall',
-            component: () => import('@/views/status/firewall.vue'),
-        }, {
-            path: '/status/routes',
-            name: 'routes',
-            component: () => import('@/views/status/routes.vue'),
-        }, {
-            path: '/status/syslog',
-            name: 'syslog',
-            component: () => import('@/views/status/syslog.vue'),
-        }
+        ...nav_routes
     ]
 })
 
